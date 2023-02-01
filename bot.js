@@ -7,6 +7,7 @@ const lat = 28.6448;
 const lon = 77.216721;
 const url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${access_key}`;
 
+
 function kelvinToCelsius(tempr) {
   return tempr - 273.15;
 }
