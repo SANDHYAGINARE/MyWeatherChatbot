@@ -7,17 +7,6 @@ const lat = 28.6448;
 const lon = 77.216721;
 const url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${access_key}`;
 
-const fetchData = () => {
-  return axios
-    .get(url)
-    .then((res) => {
-      return res.data.main.temp;
-    })
-    .catch((error) => {
-      console.error("Failed to fetch data", error);
-    });
-};
-
 function kelvinToCelsius(tempr) {
   return tempr - 273.15;
 }
@@ -41,6 +30,6 @@ bot.on("message", (ctx) => {
   sendTemperatureUpdate(ctx);
   setInterval(() => {
     sendTemperatureUpdate(ctx);
-  }, 3600000);
+  }, 3000);
 });
 bot.launch();
