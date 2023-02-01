@@ -41,6 +41,6 @@ bot.on("message", (ctx) => {
   sendTemperatureUpdate(ctx);
   setInterval(() => {
     sendTemperatureUpdate(ctx);
-  }, 3600000); 
+  }, 3600000);
 });
 bot.launch();
